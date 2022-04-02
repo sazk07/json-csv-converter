@@ -10,7 +10,7 @@ def j2c(fileinput: str, newnameinput: str) -> object:
 
 
 def j2c_nested(fileinput: str, newnameinput: str, key_to_extract: str) -> object:
-    with open(fileinput, encoding="utf-8") as file_:
+    with open(fileinput, encoding="utf-8-sig") as file_:
         json_object = json.load(file_)
         extracted_results_of_key = json_object[key_to_extract]
     with open(newnameinput, "w", encoding="utf-8",newline="\n") as out:
